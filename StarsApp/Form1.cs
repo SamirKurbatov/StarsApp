@@ -3,7 +3,10 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
+using System.IO.Compression;
 using System.Linq;
+using System.Media;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -43,7 +46,7 @@ namespace StarsApp
 
         private void MoveStar(Star star)
         {
-            star.Z -= 15;
+            star.Z -= 10;
             if (star.Z < 1)
             {
                 star.X = random.Next(-pictureBox1.Width, pictureBox1.Width);
@@ -82,6 +85,5 @@ namespace StarsApp
             }
             timer1.Start();
         }
-        
     }
 }
